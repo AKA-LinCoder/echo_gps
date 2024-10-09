@@ -41,12 +41,10 @@ class _LocationViewState extends State<LocationView> {
     var data = await getStringData("positionItems");
     if (data != null) {
       jsonDecode(data).forEach((item) {
-        print("这是数据$item");
         _positionItems.add(_PositionItem.fromJson(item));
       });
     }
     setState(() {
-
     });
   }
 
